@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(img/4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.character-card {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.character-image {
+    width: 450px; /* Измените ширину по вашему желанию */
+    height: auto; /* Высота будет пропорциональна ширине */
+    margin-right: 20px;
+}
+
+.character-description {
+    max-width: 500px; /* Вы можете настроить ширину текста */
+}
+
+
+.duels, .spells {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.duel-photo, .spell-photo {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.duel-photo img, .spell-photo img, .spell-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+  }
+
+header {
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.button {
+    background-color: #234c6e;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.button:hover {
+    background-color: #498dc4;
+}
+
+.float-image {
+    float: right;
+    margin: 0 0 10px 10px;
+    max-width: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Стили для слайдера */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    display: block;
+    animation: fade 3s linear infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    15% {opacity: 1;}
+    30% {opacity: 1;}
+    45% {opacity: 0;}
+}
+
+.dots {
+    text-align: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.sliderA {
+	width: 900px;
+     height: 550px;
+     border: 3px solid #000;
+     border-radius: 13px;
+     box-shadow: 0 0 7px 2px;
+     position: relative; /*задать новую точку отсчёта позиций вложенных контейнеров*/
+     text-align: center;
+     margin-left: 300px;
+}
+.sliderA > input {
+	display: none;
+}
+.sliderA > input + label {
+	background: rgba(90, 90, 90, 0.8) none repeat scroll 0 0;
+	border: 2px solid rgba(190, 190, 190, 0.8);
+	border-radius: 8px;
+	cursor: pointer; /*внешний вид курсора мыши при наведении на кнопку*/
+	display: block;
+	float: left;
+	height: 10px;
+	left: 45%;
+	margin-right: 4px;
+	position: relative;
+	top: 95%;
+	transition: background 0.8s ease-out 0s;  /*определяет анимацию для смены фона*/
+	width: 10px;
+	z-index: 100;
+}
+.sliderA > input + label:hover {
+     background: rgba(250, 250, 250, 0.8);
+}
+.sliderA > input:checked + label {
+     background: rgba(220, 220, 220, 0.8);
+}
+.sliderA > div {
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     bottom: 0px;
+     z-index: 0;
+}
+.sliderA > div {
+     visibility: hidden; /*Когда пользователь переключает кадр, новый кадр появляется с visibility: visible, но с opacity: 0*/
+     opacity: 0;
+     transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+.sliderA > input:checked + label + div {
+     visibility: visible;
+     opacity: 1;
+     transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s; 
+}
